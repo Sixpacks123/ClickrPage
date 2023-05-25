@@ -12,18 +12,6 @@ const { t } = useLang()
 const app = useAppConfig() as AppConfigInput
 const menus = computed((): IMenuItem[] => [
   {
-    type: 'link',
-    text: t('pages.getting-started.nav'),
-    route: { name: 'getting-started' },
-  },
-  { type: 'link', text: t('pages.blank.nav'), route: { name: 'blank' } },
-  { type: 'link', text: t('pages.test.nav'), route: { name: 'test' } },
-  { type: 'link', text: t('pages.post.nav'), route: { name: 'post' } },
-  { type: 'link', text: t('pages.setting.nav'), route: { name: 'setting' } },
-  {
-    type: 'button',
-    text: t('pages.dashboard.nav'),
-    route: { name: 'dashboard' },
   },
 ])
 </script>
@@ -73,15 +61,7 @@ const menus = computed((): IMenuItem[] => [
         <div
           class="flex space-x-4 border-l ml-6 pl-6 border-gray-900/10 dark:border-gray-50/[0.2]"
         >
-          <LanguageSwitcher />
           <ThemeSwitcher />
-          <Anchor
-            class="hover:no-underline hover:text-slate-900 hover:dark:text-white text-lg flex self-center items-center"
-            href="https://github.com/viandwi24/nuxt3-awesome-starter"
-            title="Github"
-          >
-            <IconMdi:github-face />
-          </Anchor>
         </div>
       </div>
     </template>
