@@ -13,20 +13,20 @@ const leadingsText = computed(() => [
   {
     text: titlesText.value[0],
     startColor: '#FF9700',
-    endColor: '#FFF3C0',
+    endColor: '#FF9700',
     delay: 0,
   },
   {
     text: titlesText.value[1],
-    startColor: '#FFF3C0',
+    startColor: '#E50000',
     endColor: '#E50000',
-    delay: 2,
+    delay: 1,
   },
   {
     text: titlesText.value[2],
     startColor: '#FF9700',
-    endColor: '#FFF3C0',
-    delay: 4,
+    endColor: '#FF9700',
+    delay: 2,
   },
 ])
 const tooltip = ref(false)
@@ -50,20 +50,20 @@ const copyBash = () => {
   <PageWrapper class="flex-1 flex">
     <div class="background-overlay">
       <div
-        class="absolute top-0 left-0 transform translate-x-64 translate-y-4 h-14 w-14 rounded-full bg-gray-900 dark:bg-white"
+        class="hidden absolute md:block bottom- top-0 left-0 transform translate-x-64 translate-y-4 h-14 w-14 rounded-full bg-gray-900 dark:bg-white"
       ></div>
       <div
-        class="absolute hidden md:block top-0 left-0 transform translate-x-18 translate-y-20 h-28 w-28 rounded-full bg-orange-500 linear-wipe"
+        class="hidden absolute hidden md:block top-0 left-0 transform translate-x-18 translate-y-20 h-28 w-28 rounded-full bg-orange-500 linear-wipe"
       ></div>
       <div
         class="absolute hidden md:block bottom-0 right-0 transform -translate-x-4 -translate-y-40 h-16 w-16 rounded bg-pink-600 linear-wipe"
       ></div>
-      <div class="absolute bottom-0 right-0 triangle-shape "></div>
+      <div class="absolute hidden md:block bottom- bottom-0 right-0 triangle-shape"></div>
     </div>
     <PageBody class="flex-1 flex">
-      <PageSection class="flex-1 flex items-center">
-        <div class="flex-1 md:w-5/8 flex flex-col z-10">
-          <h1 class="text-center md:text-left mt-4">
+      <PageSection class="flex-1 flex items-center md:flex-row flex-col">
+        <div class="md:flex-1 md:w-5/8 flex flex-col z-10">
+          <h1 class="text-center md:text-left mt-12 md:mt-4">
             <span
               v-for="(item, i) in leadingsText"
               :key="i"
@@ -82,7 +82,7 @@ const copyBash = () => {
           >
           </div>
         </div>
-        <div class="hidden md:flex md:w-3/8 justify-center items-end relative">
+        <div class=" md:flex md:w-3/8 justify-center items-end relative">
           <div class="ml-4 w-100 z-10 h-auto shadow">
             <div
               class="win-header bg-gray-200 dark:bg-slate-800 flex flex space-x-4 px-3 py-2 rounded-t-lg relative border-b-2 border-gray-300/75 dark:border-slate-700/75"
